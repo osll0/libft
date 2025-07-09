@@ -22,7 +22,11 @@ SRC_GNL = get_next_line get_next_line_utils
 SRCS_GNL = $(addsuffix .c, $(SRC_GNL))
 OBJS_GNL = $(SRCS_GNL:.c=.o)
 
-OBJS = $(OBJS_LIBFT) $(OBJS_GNL) $(OBJS_PRINTF)
+SRC_ADDITIONAL = ft_isspace ft_atol ft_atod ft_strcmp ft_isnum
+SRCS_ADDITIONAL = $(addsuffix .c, $(SRC_ADDITIONAL))
+OBJS_ADDITIONAL = $(SRCS_ADDITIONAL:.c=.o)
+
+OBJS = $(OBJS_LIBFT) $(OBJS_GNL) $(OBJS_PRINTF) $(OBJS_ADDITIONAL)
 
 all: $(NAME)
 
